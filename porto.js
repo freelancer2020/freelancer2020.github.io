@@ -82,7 +82,7 @@ function fetchAboutTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/about.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/about.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -119,7 +119,7 @@ function fetchEducationTemplate() {
     mainReview.children[smart].remove();
 }
     mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/education.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/education.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -161,7 +161,7 @@ function fetchExperinceTemplate() {
     mainReview.children[smart].remove();
 }
     malbornRoad.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/experince.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/experince.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -265,7 +265,7 @@ function fetchSkillsTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/skills.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/skills.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -303,7 +303,7 @@ function fetchLanguagesTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/languages.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/languages.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -375,7 +375,7 @@ function fetchAwardTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/award.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/award.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -420,7 +420,7 @@ function fetchInterestsTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/interests.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/interests.html";
     let header = new Headers();
     let init = {
         method: "GET",
