@@ -1,0 +1,67 @@
+<template id = "education">
+    <div id = "education-container">
+        <div id = "left-side">
+            <div id = "top">
+                <p>2005 - 2009</p>
+                <p class = "letter">
+                   <b> Bachelor of Science , computer science and administration technology.</b> University of Cairo － Cairo, Egypt Bachelor's degree in computer science and administration technology.
+                </p>
+                <br>
+                <p>2009 - 2010</p>
+                <p class = "letter"><b>Associate of Science , Securing IoT Data and Communications</b>
+                    Associate of Science , Securing IoT Data and Communications.</p>
+            </div>
+            <div id = "bottom">
+               
+            </div>
+        </div>
+        <div id = "right-side">
+            <img id = "education-image" src = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/images/educations.jpg">
+        </div>
+    </div>
+    <style>
+        #education-container {
+            width: 55vw;
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #ffffff;
+        }
+        #education-container::before {
+            content:"Education";
+            width: 200px;
+            height: 50px;
+            color: royalblue;
+            position: absolute;
+            margin-top: -400px;
+            margin-left: -500px;
+            font-family: Aleo;
+            font-size: 25px;
+        }
+        #left-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+        }
+        #right-side {
+            width: 40%;
+        }
+        .letter {
+            font-family: Aleo;
+
+        }
+        #education-image {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</template>
+<script>
+    window.onload = () => {
+        let tars = document.getElementById("education");
+        let content = tars.content.cloneNode(true);
+        document.body.append(content);
+    }
+</script>

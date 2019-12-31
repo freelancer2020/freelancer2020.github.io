@@ -1,0 +1,261 @@
+<template id ="skills-template">
+    <div id = "skills">
+    <div class = "skills-top"><!--Top start-->
+        <div class = "top-left">
+            <div class = "skills-level">Expert</div>
+            <div class = "skills-level">Advanced</div>
+            <div class = "skills-level">Intermediate</div>
+            <div class = "skills-level">Pre-intermediate</div>
+            <div class = "skills-level">Basic</div>
+        </div>
+        <div class = "top-middle"></div>
+        <div class = "top-right"></div>
+    </div><!--top end-->
+    <div class = "skills-bottom"><!--bottom start-->
+        <div class = "bottom-left"></div>
+        <div class = "bottom-middle">
+            <div class = "bottom-middle-top">
+                <div class = "row row_1">
+                    <div class = "row-ind row-ind-1"></div>
+                </div>
+                <div class = "row row_2">
+                    <div class = "row-ind row-ind-2"></div>
+                </div>
+                <div class = "row row_3">
+                    <div class = "row-ind row-ind-3"></div>
+                </div>
+                <div class = "row row_4">
+                    <div class = "row-ind row-ind-4"></div>
+                </div>
+                <div class = "row row_5">
+                    <div class = "row-ind row-ind-5"></div>
+                </div>
+                <div class = "row row_6">
+                    <div class = "row-ind row-ind-6"></div>
+                </div>
+                <div class = "row row_7">
+                    <div class = "row-ind row-ind-7"></div>
+                </div>
+                <div class = "row row_8">
+                    <div class = "row-ind row-ind-8"></div>
+                </div>
+                <div class = "row row_9">
+                    <div class = "row-ind row-ind-9"></div>
+                </div>
+                <div class = "row row_10">
+                    <div class = "row-ind row-ind-10"></div>
+                </div>
+            </div>
+            <div class = "bottom-middle-bottom">
+                <div class = "skill skill-wrod-1">NodeJS</div>
+                <div class = "skill skill-wrod-2">ReactJS</div>
+                <div class = "skill skill-wrod-3">Git&GitHub</div>
+                <div class = "skill skill-wrod-4">jQuery</div>
+                <div class = "skill skill-wrod-5">Ms</div>
+                <div class = "skill skill-wrod-6">Html</div>
+                <div class = "skill skill-wrod-7">Css</div>
+                <div class = "skill skill-wrod-8">JavaScript</div>
+                <div class = "skill skill-wrod-9">Data Analysis</div>
+                <div class = "skill skill-wrod-10">Social Media</div>
+            </div>
+        </div>
+        <div class = "bottom-right"></div>
+    </div><!--bottom end-->
+</div><!--end of main container-->
+
+<style>
+    #skills {
+        width: 55vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .skills-top {
+        width: 55vw;
+        height: 80%;
+        display: flex;
+    }
+    .top-left {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .top-middle {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .top-right {
+        width: 5%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .skills-bottom {
+        width: 55vw;
+        height: 20%;
+        display: flex;
+    }
+    .bottom-left {
+        width: 15%;
+        height: 100%;
+    }
+    .bottom-middle {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom-middle-top {
+        width: 100%;
+        height: 1%;
+        display: flex;
+        border-bottom: 4px solid lightgray;
+        z-index: 2;
+    }
+    .bottom-middle-bottom {
+        width: 100%;
+        height: 99%;
+        display: flex;
+    }
+    .bottom-right{
+        width: 5%;
+        height: 100%;
+    }
+    .skills-level {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Aleo;
+    }
+    .row {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       position: relative;
+    }
+    .skill {
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .row-ind {
+        width: 30px;
+        background-color: #54C571;
+        position: absolute;
+        bottom: 0;
+        margin-left: 5px;
+        margin-bottom: 0px;
+        left: 0;
+        z-index: 1;
+        border-radius: 5px 5px 0 0;
+        transition: 2s ease-out;
+    }
+  
+    .grid {
+        width: 10px;
+        height:10px;
+        border: 1px solid lightgray;
+        margin: 0;
+    }
+    
+    .skills-level::after {
+        content: "";
+        width: 42vw;
+        height: 2px;
+        background-color: lightgray;
+        position: absolute;
+        left: 0;
+        margin-left: 10vw;
+    }
+    .row-ind-1 {
+        height: 24vh;
+    }
+    .row-ind-2 {
+        height: 26vh;
+    }
+    .row-ind-3 {
+        height: 29vh;
+    }
+    .row-ind-4 {
+        height: 37vh;
+    }
+    .row-ind-5 {
+        height: 38vh;
+    }
+    .row-ind-6 {
+        height: 44vh;
+    }
+    .row-ind-7 {
+        height: 45vh;
+    }
+    .row-ind-8 {
+        height: 50vh;
+    }
+    .row-ind-9 {
+        height: 53vh;
+    }
+    .row-ind-10 {
+        height: 63vh;
+    }
+
+    
+   
+</style>
+
+
+
+</template>
+
+<script>
+     /*
+    window.onload = function() {
+    setTimeout( () => {
+        return new Promise(resolve => {
+        let targ = document.getElementById("skills-template");
+        let myContent = targ.content.cloneNode(true);
+        resolve(myContent);
+       })
+       .then(value => {
+           document.body.append(value);
+       })
+       .then( () => {
+        let arrHeight = [24, 26, 29, 37, 38, 44, 45, 50, 53, 63];
+        let allRows = [
+            document.getElementsByClassName("row-ind-1")[0],
+            document.getElementsByClassName("row-ind-2")[0],
+            document.getElementsByClassName("row-ind-3")[0],
+            document.getElementsByClassName("row-ind-4")[0],
+            document.getElementsByClassName("row-ind-5")[0],
+            document.getElementsByClassName("row-ind-6")[0],
+            document.getElementsByClassName("row-ind-7")[0],
+            document.getElementsByClassName("row-ind-8")[0],
+            document.getElementsByClassName("row-ind-9")[0],
+            document.getElementsByClassName("row-ind-10")[0]
+        ];
+        for (let i = 0; i < allRows.length; i++) {
+            allRows[i].style.height = `${arrHeight[i]}vh`;
+        }
+            
+       })
+       .catch(err => alert(err.message));
+
+    }, 1000);
+       
+        
+    }
+   */    
+
+</script>

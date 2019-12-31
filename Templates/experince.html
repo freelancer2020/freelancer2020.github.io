@@ -1,0 +1,236 @@
+<template id = "experince">
+    <div class = "ex-container"><!--main container start-->
+
+        <div class = "left-side-part"><!--left container start-->
+          <div class = "opera"><!--opera view start-->
+            <div class = "stage stage-1"><!--accenture start-->
+              <div class = "job-title">
+               <b> Senior Data Analyst</b>
+              </div>
+              <div class = "country">
+                <b>Accenture</b>- Warsaw, Poland
+              </div>
+              <div class = "summary">
+                responsibility : Interpret data, analyze results using statistical techniques and provide ongoing reports.-Develop and implement databases, data collection systems, data analytics and other strategies that optimize statistical efficiency and quality.Identify, analyze, and interpret trends or patterns in complex data sets. -Work with management to prioritize business and information needs.
+              </div>
+            </div><!--accenture end-->
+            <div class = "stage stage-2"><!--raya start-->
+              <div class = "job-title">
+                <b>Database Designer</b>
+              </div>
+              <div class = "country">
+                <b>RayaTelecome</b>- Cairo, Egypt
+              </div>
+              <div class = "summary">
+                responsibility : organization and focus mainly on the programming aspect of database design, analyzing data inquiry needs, ensuring security of information and organizing layout to best present the information needed.
+              </div>
+            </div><!--raya end-->
+            <div class = "stage stage-3"><!--egy start-->
+              <div class = "job-title">
+                <b>Data Collector</b>
+              </div>
+              <div class = "country">
+                <b>EgyNet </b>- Cairo, Egypt
+              </div>
+              <div class = "summary">
+                responsibility : Performing day-to-day data collection activities. Contacting randomly selected participants to discuss the survey and the participant's involvement. Responding to questions the participant may have about the survey. 
+              </div>
+            </div><!--egy end-->
+          
+        </div><!--left container end-->
+      </div>
+
+    
+
+        <div class = "middle-side-part"><!--middle container start-->
+          <div class = "top-arrow">
+            <div class = "top"></div>
+          </div>
+          <div class = "line">
+            <div class = "line-bar">
+              <div class = "ball"></div>
+            </div>
+          </div>
+          <div class = "bottom-arrow">
+            <div class = "bottom"></div>
+          </div>
+        </div><!--middle container end-->
+
+        <div class = "right-side-part"><!--right container start-->
+          <div class = "years">
+            <div class = "year"><p class = "fixer fixerAs">2015 to Current</p> </div>
+            <div class = "year"><div class = "fixer">2009-2010</div></div>
+            <div class = "year"><div class = "fixer">2008</div></div>
+          </div>
+        </div><!--right container end-->
+      
+      </div><!--main containe end-->
+
+
+
+      <style>
+.ex-container {
+  width: 55vw;
+  height: 90vh;
+  display: flex;
+  background-color: #ffffff;
+}
+.left-side-part {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.middle-side-part {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.right-side-part {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top-arrow {
+  height: 10%;
+  position: relative;
+}
+.top {
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid #54C571;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.line {
+  height: 80%;
+  width: 100%;
+  position: relative;
+}
+.line-bar {
+  width: 10px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #54C571;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  z-index:2;
+}
+.ball {
+  width: 15px;
+  height: 15px;
+  border: 5px solid #54c571;
+  border-radius: 100%;
+  position: absolute;
+  z-index:3;
+  background-color: #ffffff;
+  transition: 0.5s ease-out;
+  margin-top: 10vh;
+}
+.bottom-arrow {
+  height: 10%;
+  width: 100%;
+  position: relative;
+}
+.bottom {
+  width: 0;
+  height: 0;
+  border-top: 25px solid #54C571;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.years {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.year {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.opera {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  
+}
+.stage {
+  max-height: 100%;
+  min-height: 100%;
+  transition: 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.summary {
+  font-family: Aleo;
+}
+.country {
+  font-size: 18px;
+  font-family: Aleo;
+}
+.job-title {
+  font-size: 20px;
+  font-family: Aleo;
+}
+.fixer {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: 0.5s ease-out;
+  font-family: Aleo;
+}
+.fixerAs {
+  background-color: #54C571;
+  color: #ffffff;
+}
+
+
+
+      </style>
+</template>
+
+
+<script>
+    /*
+    window.onload = function() {
+        let ex = document.getElementById("experince");
+        document.body.append(ex.content.cloneNode(true));
+    }
+    */
+</script>

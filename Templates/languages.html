@@ -1,0 +1,210 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+<template id = "language">
+<div class = "lang-container">
+<div class = "languages-skills">
+    <div class = "photo-header">
+        <img src = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/images/arabic.jpg" class = "lang-photo">
+    </div>
+    <div class = "language">
+        <div class = "lang-name"><b>Arabic</b></div>
+        <div class = "fasla">|</div>
+        <div class = "lang-level">Native </div>
+        <div class = "star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </div>
+    </div>
+    <div class = "language-article">
+        Arabic is my mother tongue language i am using it everyday
+        in my daily basis work and in my communications with friends
+        and family.
+    </div>
+    <div class = "time">
+        <p class = "la">Language last used since</p>
+        <p class = "la">h:<span class = "timer timer-hour"></span></p>
+        <p class = "la">m:<span class = "timer timer-minute"></span></p>
+        <p class = "la">s:<span class = "timer timer-sec"></span></p>
+    </div>
+</div>
+
+    <div class = "languages-skills">
+        <div class = "photo-header">
+            <img src = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/images/english.jpg" class = "lang-photo">
+        </div>
+        <div class = "language">
+            <div class = "lang-name"><b>English</b></div>
+            <div class = "fasla">|</div>
+            <div class = "lang-level">B2-C1</div>
+            <div class = "star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+        </div>
+        <div class = "language-article">
+            I have the ability to express any idea without hesitation, with good vocabulary and grammar.
+            I am speaking business English proficiency everyday at work.
+        </div>
+        <div class = "time">
+            <p class = "la">Language last used since</p>
+            <p class = "la">h:<span class = "timer timer-hour"></span></p>
+            <p class = "la">m:<span class = "timer timer-minute"></span></p>
+            <p class = "la">s:<span class = "timer timer-sec"></span></p>
+        </div>
+    </div>
+    
+        <div class = "languages-skills">
+            <div class = "photo-header">
+                <img src = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/images/polish.jpg" class = "lang-photo">
+            </div>
+            <div class = "language">
+                <div class = "lang-name"><b>Polish</b></div>
+                <div class = "fasla">|</div>
+                <div class = "lang-level">B1</div>
+                <div class = "star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class = "language-article">
+                I can hold a basic conversation and communicate on simple everyday topics.
+            </div>
+            <div class = "time">
+                <p class = "la">Language last used since</p>
+                <p class = "la">h:<span class = "timer timer-hour"></span></p>
+                <p class = "la">m:<span class = "timer timer-minute"></span></p>
+                <p class = "la">s:<span class = "timer timer-sec"></span></p>
+            </div>
+        </div>
+    </div>
+
+
+<style>
+    .lang-container {
+        width: 55vw;
+        height: 90vh;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .languages-skills {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        background-color: #E5E4E2;
+        border: 2px solid lightgray;
+        border-radius: 20px;
+    }
+    .lang-photo {
+        width: 300px;
+        height: 150px;
+        border-radius: 20px 20px 0 0;
+    }
+    .language {
+        width: 300px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .lang-name {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Aleo;
+    }
+    .fasla {
+        width: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lang-level {
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: Aleo;
+    }
+    .star {
+        width: 48%;
+        display: flex;
+    }
+    .language-article {
+        text-align: center;
+        margin-top: 10px;
+        font-family: Aleo;
+        font-size: 14px;
+        
+    }
+    .time {
+        display: flex;
+        justify-content: space-around;
+    }
+    .checked {
+        color: orange;
+    }
+</style>
+</template>
+
+
+<script>
+    
+/*
+
+let [sec, minute, hour] = [0, 0, 0];
+function setTime() {
+  let h = document.getElementsByClassName("timer-hour");
+  let m = document.getElementsByClassName("timer-minute");
+  let s = document.getElementsByClassName("timer-sec");
+
+  for (let i = 0; i < s.length && i < m.length && i < h.length; i++) {
+      s[i].textContent = sec;
+      m[i].textContent = minute;
+      h[i].textContent = hour;
+ }
+  
+  h.textContent = hour;
+  m.textContent = minute;
+  s.textContent = sec;
+
+  sec++;
+  if (sec > 59) {
+    minute++;
+    sec = 0;
+  }
+  if (minute > 59) {
+    hour++;
+    minute = 0;
+  }
+  if (hour > 23) {
+    sec = 0;
+    minute = 0;
+    hour = 0;
+  }
+  
+}
+
+setInterval( () => {
+  setTime();
+}, 1000);
+
+window.onload = function() {
+    let targ = document.getElementById("language");
+    document.body.append(targ.content.cloneNode(true));
+}
+*/
+</script>
+

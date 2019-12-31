@@ -1,0 +1,53 @@
+<template id = "aboutTemplate">
+    <div id = "container-about">
+        <div id = "sentences">
+            Experienced Quality Analyst with a demonstrated history of working in the information technology and services industry. Skilled in Network Administration, Internet Protocol Suite (TCP/IP), Cascading Style Sheets (CSS), Technical Support, and HTML. Strong quality assurance professional with a Bachelor's degree focused in Administrative computer system from higher institute of computer science and management technology in Cairo, Dev JavaScript in Codepen and Stack OverFlow.
+        </div>
+        <div id = "image-container">
+            <img id = "about-image" src = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/images/business.jpg">
+        </div>
+    </div>
+    <style>
+        #container-about {
+            width: 50vw;
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #container-about::before {
+            content:"My Background";
+            width: 200px;
+            height: 50px;
+            color: royalblue;
+            position: absolute;
+            margin-top: -400px;
+            margin-left: -450px;
+            font-family: Aleo;
+            font-size: 25px;
+        }
+        #sentences {
+            width: 50%;
+            height: auto;
+            font-size: 20px;
+        }
+        #image-container {
+            
+            position: relative;
+        }
+        #about-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+        }
+
+    </style>
+</template>
+
+<script>
+    window.onload = () => {
+        let tars = document.getElementById("aboutTemplate");
+        let content = tars.content.cloneNode(true);
+        document.body.append(content);
+    }
+</script>
