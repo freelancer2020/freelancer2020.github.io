@@ -45,9 +45,9 @@ window.onclick = function() {
 */
 window.onload = function() {
     let control = document.getElementsByClassName("control-panel")[0];
+    
     setTimeout( () => {
         control.style.marginRight = "0vw";
-        //fetchAboutTemplate();
     }, 1500);
 }
 
@@ -82,7 +82,7 @@ function fetchAboutTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/about.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/about.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -119,7 +119,7 @@ function fetchEducationTemplate() {
     mainReview.children[smart].remove();
 }
     mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/education.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/education.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -161,7 +161,7 @@ function fetchExperinceTemplate() {
     mainReview.children[smart].remove();
 }
     malbornRoad.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/experince.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/experince.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -265,7 +265,7 @@ function fetchSkillsTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/skills.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/skills.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -303,7 +303,7 @@ function fetchLanguagesTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/languages.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/languages.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -375,7 +375,7 @@ function fetchAwardTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/award.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/award.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -420,7 +420,7 @@ function fetchInterestsTemplate() {
        mainReview.children[smart].remove();
    }
    mainReview.style.marginBottom = "0px";
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/Templates/interests.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/interests.html";
     let header = new Headers();
     let init = {
         method: "GET",
@@ -558,14 +558,15 @@ function openInterests() {
 }
 
 
-const user_click_1 = document.getElementsByClassName("item")[0];
-const user_click_2  = document.getElementsByClassName("item")[1];
-const user_click_3 = document.getElementsByClassName("item")[2];
-const user_click_4 = document.getElementsByClassName("item")[3];
-const user_click_5 = document.getElementsByClassName("item")[4];
-const user_click_6 = document.getElementsByClassName("item")[5];
-const user_click_7 = document.getElementsByClassName("item")[6];
-const global_Array = [user_click_1, user_click_2, user_click_3, user_click_4, user_click_5, user_click_6, user_click_7];
+let user_click_1 = document.getElementsByClassName("item")[0];
+let user_click_2  = document.getElementsByClassName("item")[1];
+let user_click_3 = document.getElementsByClassName("item")[2];
+let user_click_4 = document.getElementsByClassName("item")[3];
+let user_click_5 = document.getElementsByClassName("item")[4];
+let user_click_6 = document.getElementsByClassName("item")[5];
+let user_click_7 = document.getElementsByClassName("item")[6];
+let global_Array = [user_click_1, user_click_2, user_click_3, user_click_4, user_click_5, user_click_6, user_click_7];
+
 
 user_click_1.onclick = openAbout;
 user_click_2.onclick = openEducation;
@@ -574,3 +575,32 @@ user_click_4.onclick = openSkills;
 user_click_5.onclick = openLanguages;
 user_click_6.onclick = openAward;
 user_click_7.onclick = openInterests;
+
+
+
+// Mobile device functions
+const menu = document.getElementsByClassName("container-mobile")[0];
+function openMobileMenu() {
+    menu.classList.toggle("mobileAd");
+}
+
+const sig = document.getElementById("clickable");
+sig.addEventListener("click", openMobileMenu, false);
+
+function initMobileMenu() {
+    menu.classList.toggle("openView");
+    let targov = document.getElementsByClassName("mobile-home-container")[0];
+    targov.style.marginTop = "-96vh";
+}
+
+const userInit = document.getElementById("hinter");
+userInit.addEventListener("click", initMobileMenu, false);
+
+function testing() {
+    let targov = document.getElementsByClassName("mobile-home-container")[0];
+    targov.style.marginTop = "-4vh";
+    menu.classList.toggle("openView");
+}
+
+const userA = document.getElementsByClassName("item-mobile")[0];
+userA.onclick = testing;

@@ -238,3 +238,146 @@ body, html {
 .greenFrame {
     border: 2px solid #54C571;
 }
+
+
+
+
+
+
+
+
+
+.profile-intro-mobile {
+    width: 100vw;
+    height: 95vh;
+    display: none;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    z-index: 1;
+    background-color: #201D1E;
+    flex-direction: column;
+    align-items: center;
+}
+.mobile-intro-header {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#mobile-part-left {
+    width: inherit;
+}
+#mobile-part-right {
+    width: inherit;
+    text-align: center;
+}
+.my-image-mobile {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+.footer-mobile {
+    width: 100vw;
+    height: 5vh;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #201D1E;
+    font-size: 12px;
+}
+#footer-left #footer-middle #footer-left {
+    text-align: center;
+}
+.container-mobile {
+    width: 100vw;
+    height: 50vh;
+    background-color: #201D1E;
+    transition: 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 8;
+    margin-bottom: -54vh;
+}
+.holder-items {
+    width: 90vw;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.item-mobile {
+    width: 100px;
+    height: 80px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid #212121;
+    font-family: Aleo;
+    cursor: pointer;
+}
+.item-mobile:hover {
+    border: 2px solid #54C571;
+}
+.symbol-mobile {
+    font-size: 20px;
+}
+.mobileAd {
+    margin-bottom:0px;
+}
+  #hinter {
+  width: 80px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 4vh solid #54C571;
+  position: relative;
+  top: 0;
+  margin-top: -90px;
+  cursor: pointer;
+}
+.mobile-home-container {
+    width: 100vw;
+    height: 96vh;
+    background-color: #201D1E;
+    position: fixed;
+    top: 0;
+    margin-top: -96vh;
+    transition: 0.5s ease-out;
+    z-index: 6;
+}
+.openView {
+    margin-bottom: -50vh;
+}
+
+
+@media screen and (max-width: 450px) and (min-width: 320px) {
+    .profile-intro-mobile {
+        display: flex;
+    }
+    .profile-intro {
+        display: none;
+    }
+    .footer {
+        display: none;
+    }
+    .footer-mobile {
+        display: flex;
+    }
+    .control-panel {
+        display: none;
+    }
+
+}
