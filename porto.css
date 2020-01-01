@@ -251,8 +251,6 @@ body, html {
     width: 100vw;
     height: 95vh;
     display: none;
-    
-    margin: auto;
     top: 0;
     z-index: 1;
     background-color: #201D1E;
@@ -285,7 +283,6 @@ body, html {
     display: none;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
     bottom: 0;
     background-color: #201D1E;
     font-size: 12px;
