@@ -266,7 +266,6 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 #mobile-part-left {
     width: inherit;
@@ -314,7 +313,6 @@ body, html {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
 }
 .item-mobile {
     width: 100px;
@@ -345,7 +343,7 @@ body, html {
   border-bottom: 4vh solid #54C571;
   position: relative;
   top: 0;
-  margin-top: -90px;
+  margin-top: -85px;
   cursor: pointer;
 }
 .mobile-home-container {
@@ -377,6 +375,12 @@ body, html {
         display: flex;
     }
     .control-panel {
+        display: none;
+    }
+    .sections {
+        display: none;
+    }
+    .projects {
         display: none;
     }
 
