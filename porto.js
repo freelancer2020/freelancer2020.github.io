@@ -600,6 +600,11 @@ function testing() {
     let targov = document.getElementsByClassName("mobile-home-container")[0];
     targov.style.marginTop = "-4vh";
     menu.classList.toggle("openView");
+    let i = targov.children.length;
+    while(i) {
+        i--;
+        targov.children[i].remove();
+    }
 
     let mobileRep = document.createElement("div");
     targov.append(mobileRep);
@@ -610,7 +615,7 @@ function testing() {
     })
     .then(page => {
         let parser = new DOMParser();
-        let wholePage = parser.parseFromString(page);
+        let wholePage = parser.parseFromString(page, "text/html");
         let contentPage = wholePage.getElementById("about-mobile");
         let contentTemplate = contentPage.content.cloneNode(true);
         mobileRep.append(contentTemplate);
