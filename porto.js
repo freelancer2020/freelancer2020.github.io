@@ -625,3 +625,32 @@ function testing() {
 
 const userA = document.getElementsByClassName("item-mobile")[0];
 userA.onclick = testing;
+
+function mobileEd() {
+    let targov = document.getElementsByClassName("mobile-home-container")[0];
+    targov.style.marginTop = "-4vh";
+    menu.classList.toggle("openView");
+    let i = targov.children.length;
+    while(i) {
+        i--;
+        targov.children[i].remove();
+    }
+
+    let mobileRep = document.createElement("div");
+    targov.append(mobileRep);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/educationMobile.html";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(page => {
+        let parser = new DOMParser();
+        let wholePage = parser.parseFromString(page, "text/html");
+        let contentPage = wholePage.getElementById("mobile-education");
+        let contentTemplate = contentPage.content.cloneNode(true);
+        mobileRep.append(contentTemplate);
+    })
+    .catch(err => console.log(err.message));
+}
+const userB = document.getElementsByClassName("item-mobile")[1];
+userB.onclick = mobileEd;
