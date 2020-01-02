@@ -600,6 +600,22 @@ function testing() {
     let targov = document.getElementsByClassName("mobile-home-container")[0];
     targov.style.marginTop = "-4vh";
     menu.classList.toggle("openView");
+
+    let mobileRep = document.createElement("div");
+    targov.append(mobileRep);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/mobileAbout.html";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(page => {
+        let parser = new DOMParser();
+        let wholePage = parser.parseFromString(page);
+        let contentPage = wholePage.getElementById("about-mobile");
+        let contentTemplate = contentPage.content.cloneNode(true);
+        mobileRep.append(contentTemplate);
+    })
+    .catch(err => console.log(err.message));
 }
 
 const userA = document.getElementsByClassName("item-mobile")[0];
