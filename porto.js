@@ -728,7 +728,8 @@ function mobileEx() {
     const imo = document.getElementById("image-jobs");
     imo.ontouchmove = function(e) {
        
-        alert("hey");
+        let x = e.pageX;
+        alert(x);
     }
     
 
