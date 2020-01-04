@@ -720,10 +720,9 @@ function mobileEx() {
         let x = e.pageX;
         this.style.marginLeft = - x + "px";
     }
-    const pano = document.getElementsByClassName("jobs-title");
-    for (let q = 0; q < pano.length; q++) {
-        pano[q].addEventListener("touchmove", move, false);
-    }
+    const pano = document.getElementsByClassName("jobs-title")[0];
+    pano.ontouchmove = move;
+    
 
 
     })
