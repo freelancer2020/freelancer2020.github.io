@@ -722,7 +722,7 @@ function mobileEx() {
     }
     const pano = document.getElementsByClassName("jobs-title");
     for (let q = 0; q < pano.length; q++) {
-        pano[q].addEventListener("touchstart", move, false);
+        pano[q].addEventListener("touchmove", move, false);
     }
 
 
