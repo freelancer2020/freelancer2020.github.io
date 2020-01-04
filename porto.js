@@ -717,6 +717,7 @@ function mobileEx() {
     user.addEventListener("click", arrowLeft, false);
     user2.addEventListener("click", arrowRight, false);
     function move(e) {
+        alert("he");
         let x = e.pageX;
         this.style.marginLeft = - x + "px";
     }
