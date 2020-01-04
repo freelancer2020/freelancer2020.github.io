@@ -1,0 +1,182 @@
+<template id = "mobileJobstemplate">
+    <div id = "jobs-container">
+        <div id = "jobs-header">
+            <img id = "image-jobs" src = "images/mobileExperince.jpg">
+        </div>
+        <div id = "jobs-top">
+            <div class = "arrow-jobs arrow-jobs-left">
+                <div class = "jobs-box-arrow jobs-box-arrow-left"></div>
+            </div>
+            <div class = "jobs-view"><!--start opera view-->
+                <div class = "jobs-title accenture">
+                    <div class = "jobs-title-name"><b> Senior Data Analyst </b></div>
+                    <div class = "job-location"><b>Accenture</b>Warsaw, Poland</div>
+                    <div class = "jobs-sub">
+                        responsibility : Interpret data, analyze results using statistical techniques and provide ongoing reports.-Develop and implement databases, data collection systems, data analytics and other strategies that optimize statistical efficiency and quality.Identify, analyze, and interpret trends or patterns in complex data sets. -Work with management to prioritize business and information need
+                    </div>
+                </div>
+                <div class = "jobs-title raya">
+                    <div class = "jobs-title-name"><b>  Database Designer </b></div>
+                    <div class = "job-location"><b>RayaTelecome</b>Cairo, Egypt</div>
+                    <div class = "jobs-sub">
+                        responsibility : organization and focus mainly on the programming aspect of database design, analyzing data inquiry needs, ensuring security of information and organizing layout to best present the information needed
+                    </div>
+                </div>
+                <div class = "jobs-title egy">
+                    <div class = "jobs-title-name"><b>  Data Collector </b></div>
+                    <div class = "job-location"><b>EgyNet</b>Cairo, Egypt</div>
+                    <div class = "jobs-sub">
+                        responsibility : Performing day-to-day data collection activities. Contacting randomly selected participants to discuss the survey and the participant's involvement. Responding to questions the participant may have about the survey. 
+                    </div>
+                </div>
+            </div><!--end of opera view-->
+            <div class = "arrow-jobs arrow-jobs-right">
+                <div class = "jobs-box-arrow jobs-box-arrow-right"></div>
+            </div>
+        </div>
+        <div id = "jobs-bottom">
+            <div id = "jobs-indicator">
+                <div class = "jobs-points"></div>
+                <div class = "jobs-points"></div>
+                <div class = "jobs-points"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        #jobs-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #jobs-header {
+            width: 100%;
+            height: 30%;
+        }
+        #jobs-top {
+            width: 100%;
+            height: 60%;
+            display: flex;
+        }
+        .arrow-jobs {
+            height: 100%;
+            width: 10%;
+            background-color: #201D1E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .jobs-view {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: red;
+        }
+        .jobs-box-arrow {
+            width: 20px;
+            height: 20px;
+            border-top: 4px solid #54C571;
+            border-left: 4px solid #54C571;
+        }
+        .jobs-box-arrow-left {
+            transform: rotate(-45deg);
+        }
+        .jobs-box-arrow-right {
+            transform: rotate(135deg);
+        }
+        #jobs-bottom {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #201D1E;
+        }
+        #jobs-indicator {
+            width: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .jobs-points {
+            width: 10px;
+            height: 10px;
+            background-color: lightgray;
+            border-radius: 100%;
+        }
+        .jobs-title {
+            max-width: 100%;
+            min-width: 100%;
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
+            justify-content: center;
+            background-color: #201D1E;
+            color: #ffffff;
+            font-family: Aleo;
+            transition: 0.5s ease-out;
+        }
+        .jobs-box-arrow {
+            cursor: pointer;
+        }
+        .rops {
+            background-color: #54C571;
+        }
+        #image-jobs {
+            width: 100%;
+            height: 100%;
+        }
+        
+       
+    
+    </style>
+    
+</template>
+
+
+<script>
+    let i = 0;
+    const collectionPoints = document.getElementsByClassName("jobs-points");
+    let views = document.getElementsByClassName("jobs-view")[0].children;
+    
+    function arrowLeft() {
+        if (i >= 2) {
+            return;
+        }
+        i++;
+        for (let x = 0; x < collectionPoints.length; x++) {
+            collectionPoints[x].classList.remove("rops");
+        }
+        views[0].style.marginLeft =  - i * views[0].clientWidth + "px";
+        collectionPoints[i].classList.add("rops");
+    }
+
+
+    function arrowRight() {
+        if (i <= 0) {
+            return;
+        }
+        i--;
+       
+        for (let x = 0; x < collectionPoints.length; x++) {
+            collectionPoints[x].classList.remove("rops");
+        }
+        views[0].style.marginLeft =  - i * views[0].clientWidth + "px";
+        collectionPoints[i].classList.add("rops");
+    }
+
+
+    
+
+    const user = document.getElementsByClassName("jobs-box-arrow-left")[0];
+    const user2 = document.getElementsByClassName("jobs-box-arrow-right")[0];
+
+    user.onclick =arrowLeft;
+    user2.onclick = arrowRight;
+</script>
