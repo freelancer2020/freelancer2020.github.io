@@ -728,7 +728,7 @@ function mobileEx() {
     const imo = document.getElementById("image-jobs");
     imo.ontouchmove = function(e) {
         let x = e.pageX;
-        this.style.marginLeft = x + "px";
+        alert(x);
     }
     
 
