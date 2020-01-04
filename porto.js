@@ -716,9 +716,19 @@ function mobileEx() {
 
     user.addEventListener("click", arrowLeft, false);
     user2.addEventListener("click", arrowRight, false);
+    function move(e) {
+        let x = e.pageX;
+        this.style.marginLeft = - x + "px";
+    }
+    const pano = document.getElementsByClassName("jobs-title");
+    for (let q = 0; q < pano.length; q++) {
+        pano[q].addEventListener("touchstart", move, false);
+    }
+
+
     })
     .catch(err => alert(err.message));
 }
 
-const userC= document.getElementsByClassName("item-mobile")[2];
+const userC = document.getElementsByClassName("item-mobile")[2];
 userC.onclick = mobileEx;
