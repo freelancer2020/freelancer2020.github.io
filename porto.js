@@ -654,3 +654,71 @@ function mobileEd() {
 }
 const userB = document.getElementsByClassName("item-mobile")[1];
 userB.onclick = mobileEd;
+
+function mobileEx() {
+    alert("word");
+    let targov = document.getElementsByClassName("mobile-home-container")[0];
+    targov.style.marginTop = "-4vh";
+    menu.classList.toggle("openView");
+    let i = targov.children.length;
+    while(i) {
+        i--;
+        targov.children[i].remove();
+    }
+
+    let mobileRep = document.createElement("div");
+    targov.append(mobileRep);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/mobileJobs.html";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(page => {
+        let parser = new DOMParser();
+        let wholePage = parser.parseFromString(page, "text/html");
+        let contentPage = wholePage.getElementById("mobileJobstemplate");
+        let contentTemplate = contentPage.content.cloneNode(true);
+        mobileRep.append(contentTemplate);
+    })
+    .then( () => {
+        let n = 0;
+    const collectionPoints = document.getElementsByClassName("jobs-points");
+    let views = document.getElementsByClassName("jobs-view")[0].children;
+    
+    function arrowLeft() {
+        if (n >= 2) {
+            return;
+        }
+        n++;
+        for (let x = 0; x < collectionPoints.length; x++) {
+            collectionPoints[x].classList.remove("rops");
+        }
+        views[0].style.marginLeft =  - n * views[0].clientWidth + "px";
+        collectionPoints[n].classList.add("rops");
+    }
+
+
+    function arrowRight() {
+        if (n <= 0) {
+            return;
+        }
+        n--;
+       
+        for (let z = 0; z < collectionPoints.length; z++) {
+            collectionPoints[z].classList.remove("rops");
+        }
+        views[0].style.marginLeft =  - n * views[0].clientWidth + "px";
+        collectionPoints[n].classList.add("rops");
+    }
+
+    const user = document.getElementsByClassName("jobs-box-arrow-left")[0];
+    const user2 = document.getElementsByClassName("jobs-box-arrow-right")[0];
+
+    user.addEventListener("click", arrowLeft, false);
+    user2.addEventListener("click", arrowRight, false);
+    })
+    .catch(err => alert(err.message));
+}
+
+const userC= document.getElementsByClassName("item-mobile")[2];
+userC.onclick = mobileEx;
