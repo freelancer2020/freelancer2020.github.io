@@ -656,7 +656,6 @@ const userB = document.getElementsByClassName("item-mobile")[1];
 userB.onclick = mobileEd;
 
 function mobileEx() {
-    alert("word");
     let targov = document.getElementsByClassName("mobile-home-container")[0];
     targov.style.marginTop = "-4vh";
     menu.classList.toggle("openView");
@@ -716,6 +715,7 @@ function mobileEx() {
 
     user.addEventListener("click", arrowLeft, false);
     user2.addEventListener("click", arrowRight, false);
+    /*
     function move(e) {
         alert("he");
         let x = e.pageX;
@@ -723,6 +723,13 @@ function mobileEx() {
     }
     const pano = document.getElementsByClassName("jobs-title")[0];
     pano.ontouchmove = move;
+    */
+
+    const imo = document.getElementById("image-jobs");
+    imo.ontochmove = function(e) {
+        let x = e.pageX;
+        this.style.marginLeft = x + "px";
+    }
     
 
 
