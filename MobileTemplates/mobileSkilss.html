@@ -1,0 +1,176 @@
+<template id = "mobileSkills">
+    <div class = "mobile-skills-container">
+        <div class = "mobile-skills-top">
+            <div id = "slider">
+                <div class = "header-slider">
+                  <div class = "slider-word">
+                    Select skills level
+                  </div>
+                  <div class = "slider-arrow">
+                    <div class = "arrow"></div>
+                  </div>
+                </div>
+                <div class = "list"><!--start list items-->
+                <div class = "container-level-items">
+          
+                  <div class = "level-item">
+                    <div class = "level-word">
+                      Intermediate Level
+                    </div>
+                    <div class = "level-pointer">
+                      <div class = "pointer"></div>
+                    </div>
+                  </div>
+                  <div class = "level-item">
+                    <div class = "level-word">
+                      Advanced Level
+                    </div>
+                    <div class = "level-pointer">
+                      <div class = "pointer"></div>
+                    </div>
+                  </div>
+                  <div class = "level-item">
+                    <div class = "level-word">
+                      Expert Level
+                    </div>
+                    <div class = "level-pointer">
+                      <div class = "pointer"></div>
+                    </div>
+                  </div>
+                  </div>
+                </div><!-- end list items-->
+              </div>
+        </div>
+
+        <div class = "mobile-skills-bottom"></div>
+    </div>
+
+    <style>
+        .mobile-skills-container {
+            width: 100vw;
+            height: 95vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #slider {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+}
+.header-slider {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background-color: royalblue;
+  align-items: center;
+}
+
+.slider-word {
+  width: 80%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+.slider-arrow {
+  width: 20%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid #ffffff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: royalblue;
+  color: #ffffff;
+  overflow-y: hidden;
+}
+.level-item {
+  width: 80%;
+  height: 50px;
+  display: flex;
+}
+.level-word {
+  width: 80%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.level-pointer {
+  width: 20%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pointer {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.container-level-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: -150px;
+  transition: 0.5s ease-out;
+}
+.open-level {
+  margin-top: 0px;
+}
+.arrow-rotate {
+  transform: rotate(180deg);
+}
+.pointed {
+  background-color: #54C571;
+}
+    </style>
+
+</template>
+
+<script>
+
+const slide = document.getElementsByClassName("header-slider")[0];
+const selectWord = document.getElementsByClassName("slider-word")[0];
+const targMobile = document.getElementsByClassName("container-level-items")[0];
+const allPoints = document.getElementsByClassName("pointer");
+
+slide.onclick = function() {
+  const arrows = document.getElementsByClassName("arrow")[0];
+  targMobile.classList.toggle("open-level");
+  arrows.classList.toggle("arrow-rotate");
+}
+
+function pointActive() {
+    for (let x = 0; x < allPoints.length; x++) {
+        allPoints[x].classList.remove("pointed");
+    }
+    this.classList.add("pointed");
+        setTimeout( () => {
+            targMobile.classList.remove("open-level");
+            selectWord.textContent = this.parentElement.previousElementSibling.textContent;
+        }, 500);
+}
+
+for (let i = 0; i < allPoints.length; i++) {
+    allPoints[i].addEventListener("click", pointActive, false);
+}
+
+</script>
