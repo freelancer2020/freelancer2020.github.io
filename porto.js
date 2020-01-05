@@ -26,8 +26,6 @@ function copyEmail(e) {
     let myRange = new Range();
     myRange.selectNode(targ);
     document.getSelection().addRange(myRange);
-   //window.getSelection().addRange(myRange);
-    //window.execCommand("copy");
     document.execCommand("copy");
     setTimeout( () => {
         style.textContent = "";
@@ -37,12 +35,7 @@ function copyEmail(e) {
 
 let emailTargCopy = document.getElementsByClassName("titles")[2];
 emailTargCopy.addEventListener("click", copyEmail, false);
-/*
-window.onclick = function() {
-    let zoo = document.getElementsByClassName("container")[0];
-    zoo.style.marginBottom = "-5vh";
-}
-*/
+
 window.onload = function() {
     let control = document.getElementsByClassName("control-panel")[0];
     
@@ -147,7 +140,6 @@ function fetchEducationTemplate() {
         frame_B.append(renderContent);
     })
     .catch(err => alert(err.message));
-
 }
 
 function fetchExperinceTemplate() {
@@ -159,7 +151,8 @@ function fetchExperinceTemplate() {
    while(smart) {
     smart--;
     mainReview.children[smart].remove();
-}
+   }
+
     malbornRoad.style.marginBottom = "0px";
     let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/experince.html";
     let header = new Headers();
@@ -715,22 +708,8 @@ function mobileEx() {
 
     user.addEventListener("click", arrowLeft, false);
     user2.addEventListener("click", arrowRight, false);
-    /*
-    function move(e) {
-        alert("he");
-        let x = e.pageX;
-        this.style.marginLeft = - x + "px";
-    }
-    const pano = document.getElementsByClassName("jobs-title")[0];
-    pano.ontouchmove = move;
-    */
-
-    const imo = document.getElementById("image-jobs");
-    imo.ontouchmove = function(e) {
-       
-        let x = e.pageX;
-        alert(x);
-    }
+    
+   //jQuery swipe
     let tam = document.getElementsByClassName("accenture")[0];
     $(".jobs-view").swipe({
         swipeStatus: function(event, phase, direction, distance, finges, fingersData, currentDirection) {
