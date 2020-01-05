@@ -794,11 +794,12 @@ function pointActive() {
             targMobile.classList.remove("open-level");
             selectWord.textContent = this.parentElement.previousElementSibling.textContent;
         }, 500);
+}
 
-        if (selectWord.textContent == "Intermediate Level") {
-            alert("hi");
-            fetchIntermediateLevel();
-        }
+allPoints[0].onclick = function() {
+    setTimeout( () => {
+        fetchIntermediateLevel();
+    }, 500);
 }
 
 function fetchIntermediateLevel() {
