@@ -796,6 +796,7 @@ function pointActive() {
         }, 500);
 
         if (selectWord.textContent == "Intermediate Level") {
+            alert("hi");
             fetchIntermediateLevel();
         }
 }
