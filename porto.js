@@ -794,6 +794,33 @@ function pointActive() {
             targMobile.classList.remove("open-level");
             selectWord.textContent = this.parentElement.previousElementSibling.textContent;
         }, 500);
+
+        if (selectWord.textContent == "Intermediate Level") {
+            fetchIntermediateLevel();
+        }
+}
+
+function fetchIntermediateLevel() {
+    const skillsPlace = document.getElementsByClassName("mobile-skills-bottom")[0];
+    let i = skillsPlace.children.length;
+    while(i) {
+        i--;
+        skillsPlace.children[i].remove();
+     }
+    const skillsBase = document.createElement("div");
+    skillsPlace.append(skillsBase);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/intermediateLevel.html";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(data => {
+        let parser = new DOMParser();
+        let initData = parser.parseFromString(data, "text/html");
+        let initPage = initData.getElementById("interMediate");
+        skillsBase.append(initPage.content.cloneNode(true));
+    })
+    .catch(err => alert(err.message));
 }
 
 for (let i = 0; i < allPoints.length; i++) {
@@ -805,4 +832,4 @@ for (let i = 0; i < allPoints.length; i++) {
 }
 
 const userD = document.getElementsByClassName("item-mobile")[3];
-userC.onclick = mobileSkills;
+userD.onclick = mobileSkills;
