@@ -747,3 +747,62 @@ function mobileEx() {
 
 const userC = document.getElementsByClassName("item-mobile")[2];
 userC.onclick = mobileEx;
+
+
+function mobileSkills() {
+    let targov = document.getElementsByClassName("mobile-home-container")[0];
+    targov.style.marginTop = "-4vh";
+    menu.classList.toggle("openView");
+    let i = targov.children.length;
+    while(i) {
+        i--;
+        targov.children[i].remove();
+    }
+
+    let mobileRep = document.createElement("div");
+    targov.append(mobileRep);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/mobileSkilss.html";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(page => {
+        let parser = new DOMParser();
+        let wholePage = parser.parseFromString(page, "text/html");
+        let contentPage = wholePage.getElementById("mobileSkills");
+        let contentTemplate = contentPage.content.cloneNode(true);
+        mobileRep.append(contentTemplate);
+    })
+    .then( () => {
+        const slide = document.getElementsByClassName("header-slider")[0];
+        const selectWord = document.getElementsByClassName("slider-word")[0];
+        const targMobile = document.getElementsByClassName("container-level-items")[0];
+        const allPoints = document.getElementsByClassName("pointer");
+
+slide.onclick = function() {
+  const arrows = document.getElementsByClassName("arrow")[0];
+  targMobile.classList.toggle("open-level");
+  arrows.classList.toggle("arrow-rotate");
+}
+
+function pointActive() {
+    for (let x = 0; x < allPoints.length; x++) {
+        allPoints[x].classList.remove("pointed");
+    }
+    this.classList.add("pointed");
+        setTimeout( () => {
+            targMobile.classList.remove("open-level");
+            selectWord.textContent = this.parentElement.previousElementSibling.textContent;
+        }, 500);
+}
+
+for (let i = 0; i < allPoints.length; i++) {
+    allPoints[i].addEventListener("click", pointActive, false);
+}
+
+    })
+    .catch(err => alert(err.message));
+}
+
+const userD = document.getElementsByClassName("item-mobile")[3];
+userC.onclick = mobileSkills;
