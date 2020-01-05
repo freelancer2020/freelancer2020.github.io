@@ -26,8 +26,6 @@ function copyEmail(e) {
     let myRange = new Range();
     myRange.selectNode(targ);
     document.getSelection().addRange(myRange);
-   //window.getSelection().addRange(myRange);
-    //window.execCommand("copy");
     document.execCommand("copy");
     setTimeout( () => {
         style.textContent = "";
@@ -37,12 +35,7 @@ function copyEmail(e) {
 
 let emailTargCopy = document.getElementsByClassName("titles")[2];
 emailTargCopy.addEventListener("click", copyEmail, false);
-/*
-window.onclick = function() {
-    let zoo = document.getElementsByClassName("container")[0];
-    zoo.style.marginBottom = "-5vh";
-}
-*/
+
 window.onload = function() {
     let control = document.getElementsByClassName("control-panel")[0];
     
@@ -147,7 +140,6 @@ function fetchEducationTemplate() {
         frame_B.append(renderContent);
     })
     .catch(err => alert(err.message));
-
 }
 
 function fetchExperinceTemplate() {
@@ -159,7 +151,8 @@ function fetchExperinceTemplate() {
    while(smart) {
     smart--;
     mainReview.children[smart].remove();
-}
+   }
+
     malbornRoad.style.marginBottom = "0px";
     let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/experince.html";
     let header = new Headers();
@@ -625,3 +618,132 @@ function testing() {
 
 const userA = document.getElementsByClassName("item-mobile")[0];
 userA.onclick = testing;
+
+function mobileEd() {
+    let targov = document.getElementsByClassName("mobile-home-container")[0];
+    targov.style.marginTop = "-4vh";
+    menu.classList.toggle("openView");
+    let i = targov.children.length;
+    while(i) {
+        i--;
+        targov.children[i].remove();
+    }
+
+    let mobileRep = document.createElement("div");
+    targov.append(mobileRep);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/educationMobile.html";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(page => {
+        let parser = new DOMParser();
+        let wholePage = parser.parseFromString(page, "text/html");
+        let contentPage = wholePage.getElementById("mobile-education");
+        let contentTemplate = contentPage.content.cloneNode(true);
+        mobileRep.append(contentTemplate);
+    })
+    .catch(err => console.log(err.message));
+}
+const userB = document.getElementsByClassName("item-mobile")[1];
+userB.onclick = mobileEd;
+
+function mobileEx() {
+    let targov = document.getElementsByClassName("mobile-home-container")[0];
+    targov.style.marginTop = "-4vh";
+    menu.classList.toggle("openView");
+    let i = targov.children.length;
+    while(i) {
+        i--;
+        targov.children[i].remove();
+    }
+
+    let mobileRep = document.createElement("div");
+    targov.append(mobileRep);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/mobileJobs.html";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(page => {
+        let parser = new DOMParser();
+        let wholePage = parser.parseFromString(page, "text/html");
+        let contentPage = wholePage.getElementById("mobileJobstemplate");
+        let contentTemplate = contentPage.content.cloneNode(true);
+        mobileRep.append(contentTemplate);
+    })
+    .then( () => {
+        let n = 0;
+    const collectionPoints = document.getElementsByClassName("jobs-points");
+    let views = document.getElementsByClassName("jobs-view")[0].children;
+    
+    function arrowLeft() {
+        if (n >= 2) {
+            return;
+        }
+        n++;
+        for (let x = 0; x < collectionPoints.length; x++) {
+            collectionPoints[x].classList.remove("rops");
+        }
+        views[0].style.marginLeft =  - n * views[0].clientWidth + "px";
+        collectionPoints[n].classList.add("rops");
+    }
+
+
+    function arrowRight() {
+        if (n <= 0) {
+            return;
+        }
+        n--;
+       
+        for (let z = 0; z < collectionPoints.length; z++) {
+            collectionPoints[z].classList.remove("rops");
+        }
+        views[0].style.marginLeft =  - n * views[0].clientWidth + "px";
+        collectionPoints[n].classList.add("rops");
+    }
+
+    const user = document.getElementsByClassName("jobs-box-arrow-left")[0];
+    const user2 = document.getElementsByClassName("jobs-box-arrow-right")[0];
+
+    user.addEventListener("click", arrowLeft, false);
+    user2.addEventListener("click", arrowRight, false);
+    
+   //jQuery swipe
+    let tam = document.getElementsByClassName("accenture")[0];
+    $(".jobs-view").swipe({
+        swipeStatus: function(event, phase, direction, distance, finges, fingersData, currentDirection) {
+            if (direction == "left" && phase == "end") {
+                if (n >= 2) {
+                    return;
+                }
+                for (let x = 0; x < collectionPoints.length; x++) {
+                    collectionPoints[x].classList.remove("rops");
+                }
+                n++;
+                tam.style.marginLeft = - n * tam.clientWidth + "px";
+                collectionPoints[n].classList.add("rops");
+            }
+            if (direction == "right" && phase == "end") {
+                if (n <= 0) {
+                    return;
+                }
+                for (let x = 0; x < collectionPoints.length; x++) {
+                    collectionPoints[x].classList.remove("rops");
+                }
+                n--;
+                tam.style.marginLeft = - n * tam.clientWidth + "px";
+                collectionPoints[n].classList.add("rops");
+
+            }
+        }
+    })
+    
+
+
+    })
+    .catch(err => alert(err.message));
+}
+
+const userC = document.getElementsByClassName("item-mobile")[2];
+userC.onclick = mobileEx;
