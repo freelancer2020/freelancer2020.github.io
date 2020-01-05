@@ -731,6 +731,34 @@ function mobileEx() {
         let x = e.pageX;
         alert(x);
     }
+    let tam = document.getElementsByClassName("accenture")[0];
+    $(".jobs-view").swipe({
+        swipeStatus: function(event, phase, direction, distance, finges, fingersData, currentDirection) {
+            if (direction == "left" && phase == "end") {
+                if (n >= 2) {
+                    return;
+                }
+                for (let x = 0; x < collectionPoints.length; x++) {
+                    collectionPoints[x].classList.remove("rops");
+                }
+                n++;
+                tam.style.marginLeft = - n * tam.clientWidth + "px";
+                collectionPoints[n].classList.add("rops");
+            }
+            if (direction == "right" && phase == "end") {
+                if (n <= 0) {
+                    return;
+                }
+                for (let x = 0; x < collectionPoints.length; x++) {
+                    collectionPoints[x].classList.remove("rops");
+                }
+                n--;
+                tam.style.marginLeft = - n * tam.clientWidth + "px";
+                collectionPoints[n].classList.add("rops");
+
+            }
+        }
+    })
     
 
 
