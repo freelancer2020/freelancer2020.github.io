@@ -56,6 +56,14 @@
             flex-direction: column;
             justify-content: center;
         }
+        .mobile-skills-top {
+            width: 100%;
+            height: 50%;
+        }
+        .mobile-skills-bottom {
+            width: 100%;
+            height: 50%;
+        }
         #mobile-fixer {
             width: 100%;
             height: auto;
@@ -63,7 +71,7 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         #slider {
   width: 100%;
@@ -156,7 +164,7 @@
     color: royalblue;
 }
     </style>
-    <script src="https://kit.fontawesome.com/7d2d0643b6.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/7d2d0643b6.js" crossorigin="anonymous"></script>
 
 </template>
 
@@ -182,6 +190,8 @@ function pointActive() {
             targMobile.classList.remove("open-level");
             selectWord.textContent = this.parentElement.previousElementSibling.textContent;
         }, 500);
+
+        
 }
 
 for (let i = 0; i < allPoints.length; i++) {
