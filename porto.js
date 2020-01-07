@@ -759,6 +759,8 @@ function mobileSkills() {
         targov.children[i].remove();
     }
 
+    let allPoints;
+
     let mobileRep = document.createElement("div");
     targov.append(mobileRep);
     let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/mobileSkilss.html";
@@ -777,7 +779,7 @@ function mobileSkills() {
         const slide = document.getElementsByClassName("header-slider")[0];
         const selectWord = document.getElementsByClassName("slider-word")[0];
         const targMobile = document.getElementsByClassName("container-level-items")[0];
-        const allPoints = document.getElementsByClassName("pointer");
+     allPoints = document.getElementsByClassName("pointer");
 
 slide.onclick = function() {
   const arrows = document.getElementsByClassName("arrow")[0];
