@@ -836,14 +836,14 @@ for (let i = 0; i < allPoints.length; i++) {
 
 
 function fetchAdvancedeLevel() {
-  //  const skillsPlace = document.getElementsByClassName("mobile-skills-bottom")[0];
-    let i = skillsPlace.children.length;
+    const skillsPlaceR = document.getElementsByClassName("mobile-skills-bottom")[0];
+    let i = skillsPlaceR.children.length;
     while(i) {
         i--;
-        skillsPlace.children[i].remove();
+        skillsPlaceR.children[i].remove();
      }
-    const skillsBase = document.createElement("div");
-    skillsPlace.append(skillsBase);
+    const skillsBaseR = document.createElement("div");
+    skillsPlaceR.append(skillsBase);
     let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/advancedLevel.htmll";
     fetch(url)
     .then(response => {
@@ -853,7 +853,7 @@ function fetchAdvancedeLevel() {
         let parser = new DOMParser();
         let initData = parser.parseFromString(data, "text/html");
         let initPage = initData.getElementById("container-advanced");
-        skillsBase.append(initPage.content.cloneNode(true));
+        skillsBaseR.append(initPage.content.cloneNode(true));
         let logos = document.createElement("script");
         logos.src = "https://kit.fontawesome.com/7d2d0643b6.js";
         logos.crossOrigin = "anonymous";
