@@ -880,7 +880,7 @@ function fetchExpertLevel() {
      }
     const skillsBaseC = document.createElement("div");
     skillsPlaceC.append(skillsBaseC);
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/advancedLevel.html";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/expertLevel.html";
     fetch(url)
     .then(response => {
         return response.text();
