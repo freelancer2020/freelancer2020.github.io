@@ -868,16 +868,17 @@ function fetchAdvancedeLevel() {
     })
     .then( () => {
         catchPointer = document.getElementsByClassName("pointer");
+        catchPointer[1].onclick = function() {
+            setTimeout( () => {
+                fetchAdvancedeLevel();
+            }, 500);
+        }
     })
    .catch(err => alert(err.message));
 }
 
 
-catchPointer[1].onclick = function() {
-    setTimeout( () => {
-        fetchAdvancedeLevel();
-    }, 500);
-}
+
 
 
 
