@@ -843,7 +843,7 @@ function fetchAdvancedeLevel() {
         skillsPlaceR.children[i].remove();
      }
     const skillsBaseR = document.createElement("div");
-    skillsPlaceR.append(skillsBase);
+    skillsPlaceR.append(skillsBaseR);
     let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/advancedLevel.htmll";
     fetch(url)
     .then(response => {
