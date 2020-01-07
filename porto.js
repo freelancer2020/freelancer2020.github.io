@@ -836,7 +836,7 @@ for (let i = 0; i < allPoints.length; i++) {
 
 
 function fetchAdvancedeLevel() {
-    const skillsPlace = document.getElementsByClassName("mobile-skills-bottom")[0];
+  //  const skillsPlace = document.getElementsByClassName("mobile-skills-bottom")[0];
     let i = skillsPlace.children.length;
     while(i) {
         i--;
