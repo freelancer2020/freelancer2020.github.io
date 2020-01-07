@@ -759,7 +759,7 @@ function mobileSkills() {
         targov.children[i].remove();
     }
 
-    let allPoints;
+
 
     let mobileRep = document.createElement("div");
     targov.append(mobileRep);
@@ -779,7 +779,7 @@ function mobileSkills() {
         const slide = document.getElementsByClassName("header-slider")[0];
         const selectWord = document.getElementsByClassName("slider-word")[0];
         const targMobile = document.getElementsByClassName("container-level-items")[0];
-     allPoints = document.getElementsByClassName("pointer");
+        const  allPoints = document.getElementsByClassName("pointer");
 
 slide.onclick = function() {
   const arrows = document.getElementsByClassName("arrow")[0];
@@ -840,6 +840,8 @@ userD.onclick = mobileSkills;
 
 //```````````````````````````````````````````````````````````````````````````
 
+let  catchPointer;
+
 function fetchAdvancedeLevel() {
     const skillsPlace = document.getElementsByClassName("mobile-skills-bottom")[0];
     let i = skillsPlace.children.length;
@@ -864,11 +866,14 @@ function fetchAdvancedeLevel() {
         logos.crossOrigin = "anonymous";
         document.getElementsByTagName("head")[0].append(logos);
     })
+    .then( () => {
+        catchPointer = document.getElementsByClassName("pointer");
+    })
    .catch(err => alert(err.message));
 }
 
 
-allPoints[1].onclick = function() {
+catchPointer[1].onclick = function() {
     setTimeout( () => {
         fetchAdvancedeLevel();
     }, 500);
