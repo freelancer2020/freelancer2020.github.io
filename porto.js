@@ -826,6 +826,10 @@ function fetchIntermediateLevel() {
         let initData = parser.parseFromString(data, "text/html");
         let initPage = initData.getElementById("interMediate");
         skillsBase.append(initPage.content.cloneNode(true));
+        let logos = document.createElement("script");
+        logos.src = "https://kit.fontawesome.com/7d2d0643b6.js";
+        logos.crossOrigin = "anonymous";
+        document.getElementsByTagName("head")[0].append(logos);
     })
     .catch(err => alert(err.message));
 }
@@ -844,7 +848,7 @@ function fetchAdvancedeLevel() {
      }
     const skillsBaseR = document.createElement("div");
     skillsPlaceR.append(skillsBaseR);
-    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/advancedLevel.htmll";
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/advancedLevel.html";
     fetch(url)
     .then(response => {
         return response.text();
