@@ -709,7 +709,7 @@ function mobileEx() {
     user.addEventListener("click", arrowLeft, false);
     user2.addEventListener("click", arrowRight, false);
     
-   //jQuery swipe
+   //jQuery swipe*******************************************************************************
     let tam = document.getElementsByClassName("accenture")[0];
     $(".jobs-view").swipe({
         swipeStatus: function(event, phase, direction, distance, finges, fingersData, currentDirection) {
@@ -835,3 +835,43 @@ for (let i = 0; i < allPoints.length; i++) {
 
 const userD = document.getElementsByClassName("item-mobile")[3];
 userD.onclick = mobileSkills;
+
+//```````````````````````````````````````````````````````````````````````````
+
+function fetchAdvancedeLevel() {
+    const skillsPlace = document.getElementsByClassName("mobile-skills-bottom")[0];
+    let i = skillsPlace.children.length;
+    while(i) {
+        i--;
+        skillsPlace.children[i].remove();
+     }
+    const skillsBase = document.createElement("div");
+    skillsPlace.append(skillsBase);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/advancedLevel.htmll";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(data => {
+        let parser = new DOMParser();
+        let initData = parser.parseFromString(data, "text/html");
+        let initPage = initData.getElementById("container-advanced");
+        skillsBase.append(initPage.content.cloneNode(true));
+        let logos = document.createElement("script");
+        logos.src = "https://kit.fontawesome.com/7d2d0643b6.js";
+        logos.crossOrigin = "anonymous";
+        document.getElementsByTagName("head")[0].append(logos);
+    })
+   .catch(err => alert(err.message));
+}
+
+
+allPoints[1].onclick = function() {
+    setTimeout( () => {
+        fetchAdvancedeLevel();
+    }, 500);
+}
+
+
+
+   
