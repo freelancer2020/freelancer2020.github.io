@@ -852,7 +852,7 @@ function fetchAdvancedeLevel() {
     .then(data => {
         let parser = new DOMParser();
         let initData = parser.parseFromString(data, "text/html");
-        let initPage = initData.getElementById("container-advanced");
+        let initPage = initData.getElementById("advanced");
         skillsBaseR.append(initPage.content.cloneNode(true));
         let logos = document.createElement("script");
         logos.src = "https://kit.fontawesome.com/7d2d0643b6.js";
