@@ -759,8 +759,6 @@ function mobileSkills() {
         targov.children[i].remove();
     }
 
-
-
     let mobileRep = document.createElement("div");
     targov.append(mobileRep);
     let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/mobileSkilss.html";
@@ -797,10 +795,15 @@ function pointActive() {
             selectWord.textContent = this.parentElement.previousElementSibling.textContent;
         }, 500);
 }
-
+// assign event handlers ***
 allPoints[0].onclick = function() {
     setTimeout( () => {
         fetchIntermediateLevel();
+    }, 500);
+}
+allPoints[1].onclick = function() {
+    setTimeout( () => {
+        fetchAdvancedeLevel();
     }, 500);
 }
 
@@ -831,16 +834,6 @@ for (let i = 0; i < allPoints.length; i++) {
     allPoints[i].addEventListener("click", pointActive, false);
 }
 
-    })
-    .catch(err => alert(err.message));
-}
-
-const userD = document.getElementsByClassName("item-mobile")[3];
-userD.onclick = mobileSkills;
-
-//```````````````````````````````````````````````````````````````````````````
-
-let  catchPointer;
 
 function fetchAdvancedeLevel() {
     const skillsPlace = document.getElementsByClassName("mobile-skills-bottom")[0];
@@ -866,16 +859,21 @@ function fetchAdvancedeLevel() {
         logos.crossOrigin = "anonymous";
         document.getElementsByTagName("head")[0].append(logos);
     })
-    .then( () => {
-        catchPointer = document.getElementsByClassName("pointer");
-        catchPointer[1].onclick = function() {
-            setTimeout( () => {
-                fetchAdvancedeLevel();
-            }, 500);
-        }
-    })
    .catch(err => alert(err.message));
 }
+
+
+    })
+    .catch(err => alert(err.message));
+} // end skills function
+
+const userD = document.getElementsByClassName("item-mobile")[3];
+userD.onclick = mobileSkills;
+
+//```````````````````````````````````````````````````````````````````````````
+
+
+
 
 
 
