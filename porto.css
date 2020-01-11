@@ -74,18 +74,17 @@ body, html {
     margin-top: -14px;
     margin-left: 8px;
   }
-  
-.social-media-contacts {
+  .social-media-contacts {
     display: flex;
     flex-direction: row;
     width: 200px;
     justify-content: space-around;
 }
-.fa-facebook {
+.fa-facebook-f {
     text-decoration: none;
     color: white;
   }
-  .fa-facebook:hover {
+  .fa-facebook-f:hover {
       color: #3B5998;
   }
 .fa-twitter {
@@ -95,18 +94,18 @@ body, html {
 .fa-twitter:hover {
     color: #55ACEE;
   }
-.fa-google {
+.fa-at{
     text-decoration: none;
     color: #ffffff;
 }
-.fa-google:hover {
+.fa-at:hover {
     color: #dd4b39;
 }
-.fa-linkedin {
+.fa-linkedin-in {
     text-decoration: none;
     color: #ffffff;
 }
-.fa-linkedin:hover {
+.fa-linkedin-in:hover {
     color: #007bb5;
 }
 #download {
