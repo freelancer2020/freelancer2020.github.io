@@ -1,0 +1,64 @@
+<template id = "mobileTemplate">
+    <div class = "mobile-languages-container">
+        <div class = "language">
+            <div class = "boxid"></div>
+            <div class = "language-name">Arabic</div>
+            <div class = "language-level">Native</div>
+        </div>
+        <div class = "language">
+            <div class = "boxid"></div>
+            <div class = "language-name">English</div>
+            <div class = "language-level">B2 -C1</div>
+        </div>
+        <div class = "language">
+            <div class = "boxid"></div>
+            <div class = "language-name">Polish</div>
+            <div class = "language-level">Basics</div>
+        </div>
+
+    </div>
+    <style>
+        .mobile-languages-container {
+            width: 100vw;
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .language {
+            display: flex;
+            align-items: center;
+            width: 45vw;
+            height: 80px;
+            box-shadow: 10px 10px 10px lightgray;
+        }
+        .language-name {
+            width: 40%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Aleo;
+            border-right: 2px solid #E5E4E2;;
+            
+        }
+        .language-level {
+            width: 40%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Aleo;
+        }
+        .boxid {
+            width: 20%;
+            height: inherit;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #E5E4E2;
+        }
+       
+    </style>
+
+</template>
