@@ -904,6 +904,35 @@ function fetchExpertLevel() {
 const userD = document.getElementsByClassName("item-mobile")[3];
 userD.onclick = mobileSkills;
 
+function mobileLang() {
+    let targov = document.getElementsByClassName("mobile-home-container")[0];
+    targov.style.marginTop = "-4vh";
+    menu.classList.toggle("openView");
+    let i = targov.children.length;
+    while(i) {
+        i--;
+        targov.children[i].remove();
+    }
+
+    let mobileRep = document.createElement("div");
+    targov.append(mobileRep);
+    let url = "https://raw.githubusercontent.com/freelancer2020/freelancer2020.github.io/master/MobileTemplates/mobileLanguage.html";
+    fetch(url)
+    .then(response => {
+        return response.text();
+    })
+    .then(page => {
+        let parser = new DOMParser();
+        let wholePage = parser.parseFromString(page, "text/html");
+        let contentPage = wholePage.getElementById("mobileTemplate");
+        let contentTemplate = contentPage.content.cloneNode(true);
+        mobileRep.append(contentTemplate);
+    })
+    .catch(err => console.log(err.message));
+}
+const userE = document.getElementsByClassName("item-mobile")[4];
+userE.onclick = mobileLang;
+
 //```````````````````````````````````````````````````````````````````````````
 
 
