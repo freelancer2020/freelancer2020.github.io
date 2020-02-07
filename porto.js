@@ -77,9 +77,10 @@ function fetchAboutTemplate() {
    mainReview.style.marginBottom = "0px";
     let url = "https://raw.githubusercontent.com/freelancer2020/Portofilio2020/master/templates/about.html";
     let header = new Headers();
+    header.append("Cache-Control", "no-cache");
     let init = {
         method: "GET",
-        cache: "no-cache",
+        headers: header
     }
     
     let reg = new Request(url, init);
