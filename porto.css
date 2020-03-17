@@ -216,6 +216,10 @@ body, html {
 .projects {
     width: 56vw;
     height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
     background-color: #201D1E;
     position: fixed;
     top:0;
