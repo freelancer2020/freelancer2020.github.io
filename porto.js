@@ -936,7 +936,27 @@ userE.onclick = mobileLang;
 //```````````````````````````````````````````````````````````````````````````
 
 
+//Music 
 
+
+let mus = 1;
+const sound = document.getElementsByTagName('audio')[0];
+const musicbtn = document.getElementById('pas');
+const resume = 'https://img.icons8.com/nolan/64/resume-button.png';
+const play = 'https://img.icons8.com/nolan/64/circled-pause.png';
+
+function runAudio() {
+  if (mus % 2 == 0) {
+    sound.pause();
+    musicbtn.src = resume;
+  } else {
+    sound.play();
+    musicbtn.src = play;
+  } 
+  mus++;
+}
+
+musicbtn.addEventListener('click', runAudio, false);
 
 
 
